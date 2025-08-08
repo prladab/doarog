@@ -1,10 +1,10 @@
 import React, { useRef, useEffect, useState } from 'react';
 
 const GridBackground = ({ 
-  lineColor = 'rgba(59, 130, 246, 0.15)', 
-  lineOpacity = 0.15, 
+  lineColor = 'rgba(59, 130, 246, 0.3)', 
+  lineOpacity = 0.3, 
   speed = 0.5, 
-  gridSize = 80 
+  gridSize = 60 
 }) => {
   const canvasRef = useRef(null);
   const animationFrameRef = useRef();
