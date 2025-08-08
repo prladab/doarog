@@ -114,8 +114,11 @@ const GridBackground = ({
         }
       }
 
-      // Check for reduced motion preference
+      // Check for reduced motion preference  
       if (!window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+        animationId = requestAnimationFrame(draw3DGrid);
+      } else {
+        // Show static grid for reduced motion
         animationId = requestAnimationFrame(draw3DGrid);
       }
     };
