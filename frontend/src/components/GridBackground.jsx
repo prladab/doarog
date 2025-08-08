@@ -57,11 +57,11 @@ const GridBackground = ({
 
         // Calculate perspective scaling and positioning
         const scale = perspective / (perspective + z);
-        const alpha = Math.max(0.02, Math.min(lineOpacity, lineOpacity * (1 - depth / gridDepth)));
+        const alpha = Math.max(0.1, Math.min(lineOpacity * 2, lineOpacity * 2 * (1 - depth / gridDepth)));
         
         ctx.globalAlpha = alpha;
-        ctx.strokeStyle = depth < 3 ? 'rgba(34, 211, 238, ' + alpha + ')' : lineColor.replace(/[\d.]+(?=\))/, alpha);
-        ctx.lineWidth = Math.max(0.3, 1 * scale);
+        ctx.strokeStyle = depth < 3 ? 'rgba(34, 211, 238, ' + alpha + ')' : 'rgba(59, 130, 246, ' + alpha + ')';
+        ctx.lineWidth = Math.max(0.8, 2 * scale);
 
         // Grid dimensions at this depth
         const gridWidth = window.innerWidth * 2 * scale;
