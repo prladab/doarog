@@ -93,9 +93,9 @@ const GridBackground = ({
 
         // Add some perspective lines (connecting to vanishing point)
         if (depth === 0) {
-          ctx.globalAlpha = lineOpacity * 0.3;
-          ctx.strokeStyle = 'rgba(59, 130, 246, ' + (lineOpacity * 0.3) + ')';
-          ctx.lineWidth = 0.5;
+          ctx.globalAlpha = lineOpacity * 0.8;
+          ctx.strokeStyle = 'rgba(59, 130, 246, ' + (lineOpacity * 0.8) + ')';
+          ctx.lineWidth = 1.5;
           
           // Corner perspective lines
           const corners = [
